@@ -1,3 +1,4 @@
+import MathCustom.MathFct;
 import Model.MathValue;
 
 import java.util.ArrayList;
@@ -6,8 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     private static String DefaultFile = "./Data/data.csv";
-    static void main(String[] args)
-    {
+    public static void main(String[] args) {
         System.out.println("Press enter to start or type exit then press enter to close");
         while (!new Scanner(System.in).nextLine().equals("exit"))
         {
@@ -15,10 +15,9 @@ public class Main {
             double variance = 0d;
             double deviation = 0d;
             ArrayList<MathValue> data = GetFile();
-
-            variance = MathCustom.MathFct.Variance(data);
-            deviation = MathCustom.MathFct.StandardDeviation(variance);
-            average = MathCustom.MathFct.Average(data);
+            variance = MathFct.Variance(data);
+            deviation = MathFct.StandardDeviation(variance);
+            average = MathFct.Average(data);
             ShowResult(average, variance, deviation);
             System.out.println("Enter to start, exit to close");
         }

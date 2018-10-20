@@ -1,6 +1,5 @@
 package MathCustom;
 
-
 import Model.MathValue;
 
 import java.util.ArrayList;
